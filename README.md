@@ -1,4 +1,4 @@
-# Web Dev Starter Code
+# Lab 6 (CSS Part 2)
 
 ## Overview
 
