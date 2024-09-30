@@ -1,4 +1,229 @@
-h1{
-  border-color: #d3e644;
-  border-style: dashed;
+* {
+  box-sizing: border-box;
 }
+
+html {
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #ccc;
+}
+
+article {
+  width: 210mm;
+  height: 297mm;
+  margin: 20px auto;
+  position: relative;
+
+  /* Testing with white background/border settings */
+  background-color: white;
+  border-top: 1mm solid black;
+  border-bottom: 1mm solid black;
+}
+
+/* Slight tweak, intended to give precedence */
+#address {
+  position: absolute;
+  bottom: 8mm;
+  right: 20mm;
+  text-align:left;
+}
+
+/* Rewritten as a rule for id="logo" instead */
+#logo {
+  position: absolute;
+  top: 12mm;
+  left: 20mm;
+  width: 128px;
+  height: 128px;
+  font-size: 20px;
+  letter-spacing: 1px;
+  text-align: center;
+  padding: 44px 0;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+
+  /* Adding filter */
+  /* filter: drop-shadow(3px 3px 4px #000000); */
+
+  /* Box-Shadow */
+  border-radius: 100px;
+  box-shadow: 3px 3px 4px black;
+  background-image: url("/img/logo.png");
+}
+
+/* Your CSS below here */
+/* These class CSS rules are set from Top -> Bottom, Parent -> Child */
+
+/* This import statement was grabbed from lipsum.com to use the DauphinPlain font */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);@font-face {
+  font-family: DauphinPlain;
+  src: url(/fonts/DauphinPlain.eot?#iefix) format('embedded-opentype'),url(/fonts/DauphinPlain.woff) format('woff'),url(/fonts/DauphinPlain.ttf) format('truetype'),url(/fonts/DauphinPlain.svg#DauphinPlain) format('svg');
+  font-weight: 700;
+  font-style: normal
+}
+
+.topper {
+  /* Fall back if the browser does not support multi image CSS property */
+  background-image: url("/img/bottom-image.png");
+
+  background-image: url("/img/top-image.png"), linear-gradient(180deg, rgb(192, 177, 177) 33%, rgb(255, 255, 255) 100%);
+  background-repeat: no-repeat;
+  /* padding: 142px 0px 0px 0px; */
+  padding: 250px 0px 0px 0px;
+  
+  /* NEED GRADIENT */
+  /* background-image: linear-gradient(180deg, rgb(192, 177, 177) 33%, rgb(255, 255, 255) 100%); */
+}
+
+#top-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.header {
+  
+}
+
+nav a {
+  color: black;
+  font-size: .7rem;
+}
+
+#title, h2 {
+  margin: 5px;
+  font-family: DauphinPlain;
+}
+
+#title {
+  margin: 0px;
+  font-size: 3.5rem;
+  /* padding: 0px 0px 15x 0px; */
+}
+
+.content {
+  text-align: center;
+  /* padding: 100px 0px; */
+}
+
+.quote {
+  font-weight: 500;
+}
+
+#first-quote {
+  margin: 15px 0px 0px 0px;
+  font-size: .7rem;
+}
+
+#final-quote {
+  margin: 5px 0px 15px 0px;
+  font-size: .6rem;
+}
+
+hr {
+  width: 80%;
+  height: 1px;
+  border: 0px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, .1), rgba(0, 0, 0, .8), rgba(0, 0, 0, .1));
+  /* background-image: linear-gradient(to right,rgba(0,0,0,0),rgba(0,0,0,.75),rgba(0,0,0,0)); */
+}
+
+#divider {
+
+}
+
+.text {
+  display: grid;
+  font-size: .65rem;
+  /* SETTING UP GRID TEMPLATE */
+  grid-template-rows: 1fr 2fr;
+  grid-template-columns: 1fr 1fr;
+  /* grid-auto-flow: row dense; */
+}
+
+.text-box {
+  display: block;
+  text-align: left;
+}
+
+#left-side-top {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+#right-side-top {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+#left-side-bottom {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+#right-side-bottom {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.website-form {
+  width: 100%;
+  /* display: block; */
+}
+
+#number {
+  width: 10%;
+  text-align: center;
+}
+
+.left-col {
+  padding: 0px 10px 0px 80px;
+}
+
+.right-col {
+  padding: 0px 80px 0px 10px;
+}
+
+#radio-table {
+  text-align: left;
+}
+
+#pushed {
+  background-color: white;
+  border: 4px solid inset;
+  border-radius: 4px;
+  transition-duration: .4s;
+}
+
+#pushed:hover {
+  background-color: yellow;
+  color: black;
+  font-weight: 700;
+}
+
+.footer {
+  /* background-position-y: bottom; */
+  padding: 215px 0px 0px 0px;
+  /* Fall back if the browser does not support multi image CSS property */
+  background-image: url("/img/bottom-image.png");
+
+  background-image: url("/img/bottom-image.png"),  linear-gradient(0deg, rgb(209, 189, 189) 33%, rgb(255, 255, 255) 100%);;
+  background-position-y: bottom;
+  background-repeat: no-repeat;
+}
+
+#main-page {
+  border-top: 1mm solid black;
+  border-bottom: 1mm solid black;
+}
+
+/* #bottom-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  /* width: "210mm"; */
+  /* object-fit: cover; */
+/* } */
